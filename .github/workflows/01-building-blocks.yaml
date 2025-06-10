@@ -5,5 +5,14 @@ jobs:
     echo-hello:
       runs-on: ubuntu-latest
       steps:
-          - name: Say Hello World
-            run: echo "Hello, World!"
+        - name: Say Hello World
+          run: echo "Hello, World!"
+    echo-goodbye:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Failed Step
+          run: |
+            echo "This step will fail"
+            exit 1
+        - name: Say Goodbye World
+          run: echo "Goodbye, World!"
